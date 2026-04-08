@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://b4qmejsxyi2sf"]
+
+[ext_resource type="Script" uid="uid://vvin0axv7hha" path="res://scenes/system/main_menu.gd" id="1_80ia5"]
+[ext_resource type="Texture2D" uid="uid://cd6hkpajr88h" path="res://assets/sprite/main_menu/sertao_final.png" id="1_pskw6"]
+[ext_resource type="Theme" uid="uid://bm4ly3g4ykymr" path="res://assets/theme/main_theme.tres" id="2_80ia5"]
+[ext_resource type="FontFile" uid="uid://wcgqx173anbs" path="res://assets/font/xilosa_.ttf" id="3_sk07m"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_65b3l"]
+font = ExtResource("3_sk07m")
+font_size = 90
+font_color = Color(0.9463989, 0.9306624, 0.6325736, 1)
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 6
+
+[sub_resource type="LabelSettings" id="LabelSettings_dkmc2"]
+font = ExtResource("3_sk07m")
+font_size = 36
+font_color = Color(0.78680146, 0.9913923, 0.76689833, 1)
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 6
+
+[node name="MainMenu" type="Control" unique_id=800242214]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_80ia5")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2048590331]
+
+[node name="background" type="TextureRect" parent="CanvasLayer" unique_id=1967888230]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_pskw6")
+expand_mode = 3
+
+[node name="left_side" type="MarginContainer" parent="CanvasLayer" unique_id=1779059816]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -20.0
+offset_right = 40.0
+offset_bottom = 20.0
+grow_vertical = 2
+size_flags_horizontal = 0
+
+[node name="menu" type="MarginContainer" parent="CanvasLayer/left_side" unique_id=805279093]
+layout_mode = 2
+theme_override_constants/margin_left = 70
+
+[node name="vbox_menu" type="VBoxContainer" parent="CanvasLayer/left_side/menu" unique_id=1160210542]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="start" type="Button" parent="CanvasLayer/left_side/menu/vbox_menu" unique_id=1921436190]
+layout_mode = 2
+theme = ExtResource("2_80ia5")
+text = "Iniciar"
+
+[node name="exit" type="Button" parent="CanvasLayer/left_side/menu/vbox_menu" unique_id=1073640693]
+layout_mode = 2
+theme = ExtResource("2_80ia5")
+text = "Sair"
+
+[node name="top_middle_side" type="MarginContainer" parent="CanvasLayer" unique_id=511540715]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -284.5
+offset_right = 284.5
+offset_bottom = 56.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_top = 35
+
+[node name="game_name" type="Label" parent="CanvasLayer/top_middle_side" unique_id=1385314484]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Caminhos de Maria Bonita"
+label_settings = SubResource("LabelSettings_65b3l")
+
+[node name="lower_right" type="MarginContainer" parent="CanvasLayer" unique_id=728838631]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 8
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="version" type="Label" parent="CanvasLayer/lower_right" unique_id=429367569]
+layout_mode = 2
+text = "Prototype 1 "
+label_settings = SubResource("LabelSettings_dkmc2")
+
+[connection signal="pressed" from="CanvasLayer/left_side/menu/vbox_menu/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="CanvasLayer/left_side/menu/vbox_menu/exit" to="." method="_on_exit_pressed"]
