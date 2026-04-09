@@ -1,15 +1,15 @@
 [gd_scene format=4 uid="uid://ddix2mjt334r0"]
 
-[ext_resource type="Texture2D" uid="uid://c5qxagrk6qicv" path="res://assets/sprite/ground/chao.jpg" id="1_q85i8"]
-[ext_resource type="Texture2D" uid="uid://dkylaa7vp2626" path="res://assets/sprite/objects/fogueira_branco.png" id="2_n5twa"]
-[ext_resource type="Texture2D" uid="uid://b7dhs6t5cquj1" path="res://assets/sprite/objects/moita_branco.png" id="3_8og13"]
-[ext_resource type="Texture2D" uid="uid://r3nxpjis0bm1" path="res://assets/sprite/objects/barraca_branco.png" id="4_mu5v1"]
-[ext_resource type="Texture2D" uid="uid://cvpaxwg5fs0ag" path="res://assets/sprite/objects/cavalo_branco(1).png" id="5_06u68"]
-[ext_resource type="Texture2D" uid="uid://bqc64a5ycihtx" path="res://assets/sprite/objects/carne-removebg-preview.png" id="6_06u68"]
-[ext_resource type="Texture2D" uid="uid://b8cswam8ikyft" path="res://assets/sprite/objects/arvore-removebg-preview.png" id="7_6tsnh"]
+[ext_resource type="Texture2D" uid="uid://c5qxagrk6qicv" path="res://assets/sprite/ground/chao.jpg" id="1_em6kt"]
+[ext_resource type="Texture2D" uid="uid://dkylaa7vp2626" path="res://assets/sprite/objects/fogueira_branco.png" id="2_sddih"]
+[ext_resource type="Texture2D" uid="uid://b7dhs6t5cquj1" path="res://assets/sprite/objects/moita_branco.png" id="3_q0j8p"]
+[ext_resource type="Texture2D" uid="uid://r3nxpjis0bm1" path="res://assets/sprite/objects/barraca_branco.png" id="4_e2i7t"]
+[ext_resource type="Texture2D" uid="uid://cvpaxwg5fs0ag" path="res://assets/sprite/objects/cavalo_branco(1).png" id="5_8iutl"]
+[ext_resource type="Texture2D" uid="uid://bqc64a5ycihtx" path="res://assets/sprite/objects/carne-removebg-preview.png" id="6_wrsmo"]
+[ext_resource type="Texture2D" uid="uid://b8cswam8ikyft" path="res://assets/sprite/objects/arvore-removebg-preview.png" id="7_1avdw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8og13"]
-texture = ExtResource("1_q85i8")
+texture = ExtResource("1_em6kt")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -2568,7 +2568,7 @@ metadata/_edit_group_ = true
 modulate = Color(0.9002346, 0.3998819, 0.24605781, 1)
 position = Vector2(7.6293945e-06, 1.9073486e-06)
 scale = Vector2(0.1648619, 0.16783614)
-texture = ExtResource("2_n5twa")
+texture = ExtResource("2_sddih")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Objetos/Fogueira" unique_id=1487577716]
 shape = SubResource("RectangleShape2D_mu5v1")
@@ -2577,115 +2577,101 @@ shape = SubResource("RectangleShape2D_mu5v1")
 
 [node name="Moita" type="Sprite2D" parent="Objetos/Moitas" unique_id=1567003078]
 modulate = Color(6.208867e-06, 0.73939544, 0.045022838, 1)
-position = Vector2(80, 471.00003)
+position = Vector2(133, 465.00003)
 scale = Vector2(0.1209502, 0.09848816)
-texture = ExtResource("3_8og13")
+texture = ExtResource("3_q0j8p")
 
 [node name="Moita2" type="Sprite2D" parent="Objetos/Moitas" unique_id=507101412]
 modulate = Color(6.208867e-06, 0.73939544, 0.045022838, 1)
-position = Vector2(197.99998, 611)
+position = Vector2(224.99998, 592.00006)
 scale = Vector2(0.1209502, 0.09848816)
-texture = ExtResource("3_8og13")
+texture = ExtResource("3_q0j8p")
 
 [node name="Moita3" type="Sprite2D" parent="Objetos/Moitas" unique_id=834967036]
 modulate = Color(6.208867e-06, 0.73939544, 0.045022838, 1)
-position = Vector2(68, 94.00001)
+position = Vector2(59, 177)
 scale = Vector2(0.1209502, 0.09848816)
-texture = ExtResource("3_8og13")
+texture = ExtResource("3_q0j8p")
 
 [node name="Moita4" type="Sprite2D" parent="Objetos/Moitas" unique_id=1125090515]
 modulate = Color(6.208867e-06, 0.73939544, 0.045022838, 1)
-position = Vector2(273, 36.00003)
+position = Vector2(355.99997, 52)
 scale = Vector2(0.1209502, 0.09848816)
-texture = ExtResource("3_8og13")
+texture = ExtResource("3_q0j8p")
 
 [node name="Moita5" type="Sprite2D" parent="Objetos/Moitas" unique_id=1017806896]
 modulate = Color(6.208867e-06, 0.73939544, 0.045022838, 1)
-position = Vector2(200.99998, 202.00002)
+position = Vector2(418, 540)
 scale = Vector2(0.1209502, 0.09848816)
-texture = ExtResource("3_8og13")
+texture = ExtResource("3_q0j8p")
 
 [node name="Moita6" type="Sprite2D" parent="Objetos/Moitas" unique_id=516698325]
 modulate = Color(6.208867e-06, 0.73939544, 0.045022838, 1)
-position = Vector2(829.99994, 558)
+position = Vector2(771.99994, 500)
 scale = Vector2(0.1209502, 0.09848816)
-texture = ExtResource("3_8og13")
+texture = ExtResource("3_q0j8p")
 
 [node name="Moita7" type="Sprite2D" parent="Objetos/Moitas" unique_id=1746744234]
 modulate = Color(6.208867e-06, 0.73939544, 0.045022838, 1)
 position = Vector2(1093, 422.00003)
 scale = Vector2(0.1209502, 0.09848816)
-texture = ExtResource("3_8og13")
+texture = ExtResource("3_q0j8p")
 
 [node name="Moita8" type="Sprite2D" parent="Objetos/Moitas" unique_id=1948132053]
 modulate = Color(6.208867e-06, 0.73939544, 0.045022838, 1)
-position = Vector2(715, 42)
+position = Vector2(827, 51.000004)
 scale = Vector2(0.1209502, 0.09848816)
-texture = ExtResource("3_8og13")
+texture = ExtResource("3_q0j8p")
 
 [node name="Moita9" type="Sprite2D" parent="Objetos/Moitas" unique_id=820344957]
 modulate = Color(6.208867e-06, 0.73939544, 0.045022838, 1)
 position = Vector2(1052, 581)
 scale = Vector2(0.1209502, 0.09848816)
-texture = ExtResource("3_8og13")
+texture = ExtResource("3_q0j8p")
 
 [node name="Moita10" type="Sprite2D" parent="Objetos/Moitas" unique_id=1374021713]
 modulate = Color(6.208867e-06, 0.73939544, 0.045022838, 1)
-position = Vector2(944, 309)
+position = Vector2(952.99994, 275)
 scale = Vector2(0.1209502, 0.09848816)
-texture = ExtResource("3_8og13")
+texture = ExtResource("3_q0j8p")
 
 [node name="Moita11" type="Sprite2D" parent="Objetos/Moitas" unique_id=546860683]
 modulate = Color(6.208867e-06, 0.73939544, 0.045022838, 1)
 position = Vector2(1046, 195)
 scale = Vector2(0.1209502, 0.09848816)
-texture = ExtResource("3_8og13")
+texture = ExtResource("3_q0j8p")
 
 [node name="Moita12" type="Sprite2D" parent="Objetos/Moitas" unique_id=593917072]
 modulate = Color(6.208867e-06, 0.73939544, 0.045022838, 1)
 position = Vector2(637, 611)
 scale = Vector2(0.1209502, 0.09848816)
-texture = ExtResource("3_8og13")
+texture = ExtResource("3_q0j8p")
 
 [node name="Cabanas" type="Node2D" parent="Objetos" unique_id=1856103557]
 
 [node name="Cabana" type="StaticBody2D" parent="Objetos/Cabanas" unique_id=1633284698]
-position = Vector2(438, 587)
+position = Vector2(792, 320)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objetos/Cabanas/Cabana" unique_id=1697113435]
 position = Vector2(3.000002, -3.9999924)
 scale = Vector2(0.22727795, 0.22376543)
-texture = ExtResource("4_mu5v1")
+texture = ExtResource("4_e2i7t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Objetos/Cabanas/Cabana" unique_id=1873787827]
 position = Vector2(8, -12)
 shape = SubResource("RectangleShape2D_6tsnh")
 
-[node name="Cabana2" type="StaticBody2D" parent="Objetos/Cabanas" unique_id=156611881]
-visible = false
-position = Vector2(1050, 582)
+[node name="Cabana2" type="StaticBody2D" parent="Objetos/Cabanas" unique_id=303122041]
+position = Vector2(331, 221)
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Objetos/Cabanas/Cabana2" unique_id=1750783257]
+[node name="Sprite2D" type="Sprite2D" parent="Objetos/Cabanas/Cabana2" unique_id=2023894735]
 position = Vector2(3.000002, -3.9999924)
 scale = Vector2(0.22727795, 0.22376543)
-texture = ExtResource("4_mu5v1")
+texture = ExtResource("4_e2i7t")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Objetos/Cabanas/Cabana2" unique_id=1441295525]
-position = Vector2(7, -13)
-shape = SubResource("RectangleShape2D_6tsnh")
-
-[node name="Cabana3" type="StaticBody2D" parent="Objetos/Cabanas" unique_id=303122041]
-position = Vector2(78, 322)
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Objetos/Cabanas/Cabana3" unique_id=2023894735]
-position = Vector2(3.000002, -3.9999924)
-scale = Vector2(0.22727795, 0.22376543)
-texture = ExtResource("4_mu5v1")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Objetos/Cabanas/Cabana3" unique_id=175275349]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objetos/Cabanas/Cabana2" unique_id=175275349]
 position = Vector2(7, -10)
 shape = SubResource("RectangleShape2D_6tsnh")
 
@@ -2696,14 +2682,14 @@ metadata/_edit_group_ = true
 [node name="Sprite2D" type="Sprite2D" parent="Objetos/Cavalo" unique_id=788373939]
 position = Vector2(20, -5)
 scale = Vector2(0.2361111, 0.2361111)
-texture = ExtResource("5_06u68")
+texture = ExtResource("5_8iutl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Objetos/Cavalo" unique_id=249897818]
 position = Vector2(15, -3)
 shape = SubResource("RectangleShape2D_q0vrd")
 
 [node name="Carne" type="StaticBody2D" parent="Objetos" unique_id=1250259792]
-position = Vector2(415, 52)
+position = Vector2(426, 454)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Objetos/Carne" unique_id=2016313834]
@@ -2713,7 +2699,7 @@ shape = SubResource("RectangleShape2D_m0ybb")
 [node name="Sprite2D" type="Sprite2D" parent="Objetos/Carne" unique_id=1915692424]
 position = Vector2(0, 2.3841858e-07)
 scale = Vector2(0.2361809, 0.23737374)
-texture = ExtResource("6_06u68")
+texture = ExtResource("6_wrsmo")
 
 [node name="Arvore" type="StaticBody2D" parent="Objetos" unique_id=1751730009]
 position = Vector2(967, 439)
@@ -2721,7 +2707,7 @@ metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objetos/Arvore" unique_id=1371549633]
 scale = Vector2(0.34242424, 0.34242424)
-texture = ExtResource("7_6tsnh")
+texture = ExtResource("7_1avdw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Objetos/Arvore" unique_id=476714493]
 position = Vector2(1, -11)
@@ -2733,31 +2719,31 @@ metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objetos/Arvore2" unique_id=259130013]
 scale = Vector2(0.34242424, 0.34242424)
-texture = ExtResource("7_6tsnh")
+texture = ExtResource("7_1avdw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Objetos/Arvore2" unique_id=866208468]
 position = Vector2(1, -11)
 shape = SubResource("CapsuleShape2D_q0vrd")
 
 [node name="Arvore3" type="StaticBody2D" parent="Objetos" unique_id=1552447677]
-position = Vector2(222, 466)
+position = Vector2(105, 330)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objetos/Arvore3" unique_id=515041048]
 scale = Vector2(0.34242424, 0.34242424)
-texture = ExtResource("7_6tsnh")
+texture = ExtResource("7_1avdw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Objetos/Arvore3" unique_id=1645496004]
 position = Vector2(1, -11)
 shape = SubResource("CapsuleShape2D_q0vrd")
 
 [node name="Arvore4" type="StaticBody2D" parent="Objetos" unique_id=1358923655]
-position = Vector2(173, 90)
+position = Vector2(162, 85)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objetos/Arvore4" unique_id=1415687503]
 scale = Vector2(0.34242424, 0.34242424)
-texture = ExtResource("7_6tsnh")
+texture = ExtResource("7_1avdw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Objetos/Arvore4" unique_id=1132171186]
 position = Vector2(1, -11)
