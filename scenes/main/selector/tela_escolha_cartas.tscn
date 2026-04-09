@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://36da2jdlh7wo"]
+
+[ext_resource type="Texture2D" uid="uid://ccx6rxpsyhqyd" path="res://assets/card/cartas_pro/cordel1.jpg" id="1_dg6yv"]
+[ext_resource type="Texture2D" uid="uid://dlw74rsh4putj" path="res://assets/card/cartas_pro/cordel3.jpg" id="2_svjsa"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ektv5"]
+load_path = "res://.godot/imported/cordel2.jpg-9b60fade0a78e12e89cbbcd5828522a3.ctex"
+
+[node name="TelaEscolhaCartas" type="Control" unique_id=388727841]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1165880362]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.083911665, 0.083911665, 0.083911665, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=524270516]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -150.0
+offset_right = 350.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 60
+alignment = 1
+
+[node name="Carta1" type="Button" parent="HBoxContainer" unique_id=1590636322]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+icon = ExtResource("1_dg6yv")
+expand_icon = true
+
+[node name="Carta2" type="Button" parent="HBoxContainer" unique_id=874146177]
+custom_minimum_size = Vector2(200, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+icon = SubResource("CompressedTexture2D_ektv5")
+expand_icon = true
+
+[node name="Carta3" type="Button" parent="HBoxContainer" unique_id=177429468]
+custom_minimum_size = Vector2(200, 300)
+layout_mode = 2
+icon = ExtResource("2_svjsa")
+expand_icon = true
