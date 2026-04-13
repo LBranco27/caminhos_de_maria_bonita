@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bqc64a5ycihtx"
-path="res://.godot/imported/carne-removebg-preview.png-f3f002a73091337c1f062ff71b9e42d0.ctex"
+path="res://.godot/imported/carne-removebg-preview.png-ec75ee38967c0e7ee6638cf19b6150d4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprite/objects/carne-removebg-preview.png"
-dest_files=["res://.godot/imported/carne-removebg-preview.png-f3f002a73091337c1f062ff71b9e42d0.ctex"]
+source_file="res://assets/sprite/background/carne-removebg-preview.png"
+dest_files=["res://.godot/imported/carne-removebg-preview.png-ec75ee38967c0e7ee6638cf19b6150d4.ctex"]
 
 [params]
 

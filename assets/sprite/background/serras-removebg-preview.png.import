@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8cswam8ikyft"
-path="res://.godot/imported/arvore-removebg-preview.png-363b78c0ce9562bd0ac209ec70a2b059.ctex"
+uid="uid://cuhih5ttibcif"
+path="res://.godot/imported/serras-removebg-preview.png-9bf881f81ae76a5cbe66328e8312b222.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprite/objects/arvore-removebg-preview.png"
-dest_files=["res://.godot/imported/arvore-removebg-preview.png-363b78c0ce9562bd0ac209ec70a2b059.ctex"]
+source_file="res://assets/sprite/background/serras-removebg-preview.png"
+dest_files=["res://.godot/imported/serras-removebg-preview.png-9bf881f81ae76a5cbe66328e8312b222.ctex"]
 
 [params]
 

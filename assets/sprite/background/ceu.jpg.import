@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7dhs6t5cquj1"
-path="res://.godot/imported/moita_branco.png-b16d6ef057c764b792d67225533372e2.ctex"
+uid="uid://dfg83hbasu6qi"
+path="res://.godot/imported/ceu.jpg-f6ff7d88db3692c1102a06503e7f568c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprite/objects/moita_branco.png"
-dest_files=["res://.godot/imported/moita_branco.png-b16d6ef057c764b792d67225533372e2.ctex"]
+source_file="res://assets/sprite/background/ceu.jpg"
+dest_files=["res://.godot/imported/ceu.jpg-f6ff7d88db3692c1102a06503e7f568c.ctex"]
 
 [params]
 

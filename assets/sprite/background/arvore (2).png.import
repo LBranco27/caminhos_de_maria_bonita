@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://r3nxpjis0bm1"
-path="res://.godot/imported/barraca_branco.png-3e0e25d9573bcb117de0b7373bb2fc73.ctex"
+uid="uid://mfpkdorvwyc3"
+path="res://.godot/imported/arvore (2).png-6b49f486272f279173e7e9007371b087.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprite/objects/barraca_branco.png"
-dest_files=["res://.godot/imported/barraca_branco.png-3e0e25d9573bcb117de0b7373bb2fc73.ctex"]
+source_file="res://assets/sprite/background/arvore (2).png"
+dest_files=["res://.godot/imported/arvore (2).png-6b49f486272f279173e7e9007371b087.ctex"]
 
 [params]
 
