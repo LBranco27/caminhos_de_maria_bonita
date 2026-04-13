@@ -9,6 +9,11 @@
 [ext_resource type="Texture2D" uid="uid://r3nxpjis0bm1" path="res://assets/sprite/background/barraca_branco.png" id="5_q0j8p"]
 [ext_resource type="Texture2D" uid="uid://bqc64a5ycihtx" path="res://assets/sprite/background/carne-removebg-preview.png" id="6_e2i7t"]
 [ext_resource type="Script" uid="uid://bivx5nf0pi61s" path="res://scripts/global/character_body_2d.gd" id="6_em6kt"]
+[ext_resource type="Script" uid="uid://cro2ia4udnvq0" path="res://scripts/global/fogueira.gd" id="7_8iutl"]
+[ext_resource type="Texture2D" uid="uid://dkylaa7vp2626" path="res://assets/sprite/objects/fogueira_branco.png" id="7_e2i7t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8iutl"]
+size = Vector2(54, 53)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_em6kt"]
 size = Vector2(34, 32)
@@ -2587,22 +2592,22 @@ scale = Vector2(0.22954714, 0.20808077)
 texture = ExtResource("3_h3e5j")
 centered = false
 
-[node name="Bush" type="Parallax2D" parent="Background" unique_id=1736704883]
+[node name="Moitas" type="Parallax2D" parent="Background" unique_id=1736704883]
 scroll_scale = Vector2(0.8, 1)
 repeat_size = Vector2(1152, 0)
 repeat_times = 3
 
-[node name="Bush" type="Sprite2D" parent="Background/Bush" unique_id=916438281]
+[node name="Bush" type="Sprite2D" parent="Background/Moitas" unique_id=916438281]
 position = Vector2(70, 562)
 scale = Vector2(0.07716053, 0.077160515)
 texture = ExtResource("3_q0j8p")
 
-[node name="Bush2" type="Sprite2D" parent="Background/Bush" unique_id=298548653]
+[node name="Bush2" type="Sprite2D" parent="Background/Moitas" unique_id=298548653]
 position = Vector2(314, 564)
 scale = Vector2(0.07716053, 0.077160515)
 texture = ExtResource("3_q0j8p")
 
-[node name="Bush3" type="Sprite2D" parent="Background/Bush" unique_id=1461133620]
+[node name="Bush3" type="Sprite2D" parent="Background/Moitas" unique_id=1461133620]
 position = Vector2(634, 562)
 scale = Vector2(0.07716053, 0.077160515)
 texture = ExtResource("3_q0j8p")
@@ -2618,12 +2623,26 @@ texture = ExtResource("5_q0j8p")
 
 [node name="Carne" type="Parallax2D" parent="Background" unique_id=610219055]
 scroll_scale = Vector2(0.95, 1)
-scroll_offset = Vector2(761, 515)
+scroll_offset = Vector2(1080, 562)
 
 [node name="Sprite2D" type="Sprite2D" parent="Background/Carne" unique_id=1831004031]
-position = Vector2(-3.0000005, 48)
 scale = Vector2(0.15046301, 0.150463)
 texture = ExtResource("6_e2i7t")
+
+[node name="Fogueira" type="Parallax2D" parent="Background" unique_id=1161509030]
+scroll_offset = Vector2(701, 554)
+script = ExtResource("7_8iutl")
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Fogueira" unique_id=397666316]
+position = Vector2(0, 1)
+scale = Vector2(0.118441395, 0.11844139)
+texture = ExtResource("7_e2i7t")
+
+[node name="Area2D" type="Area2D" parent="Background/Fogueira" unique_id=281680290]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Fogueira/Area2D" unique_id=250419718]
+position = Vector2(-2, 0)
+shape = SubResource("RectangleShape2D_8iutl")
 
 [node name="Player_provisorio" type="CharacterBody2D" parent="." unique_id=2075116241]
 position = Vector2(109, 552)
@@ -2661,3 +2680,22 @@ position = Vector2(1362, 309)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Limite_1" unique_id=1039050934]
 shape = SubResource("RectangleShape2D_q0j8p")
+
+[node name="Texto" type="CanvasLayer" parent="." unique_id=1682975224]
+
+[node name="MeuLabel" type="Control" parent="Texto" unique_id=429948657]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 582.0
+offset_top = 394.0
+offset_right = 819.0
+offset_bottom = 445.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Texto/MeuLabel" unique_id=1093312173]
+visible = false
+layout_mode = 0
+offset_right = 229.0
+offset_bottom = 50.0
+
+[connection signal="body_shape_entered" from="Background/Fogueira/Area2D" to="Background/Fogueira" method="_on_area_2d_body_shape_entered"]
+[connection signal="body_shape_exited" from="Background/Fogueira/Area2D" to="Background/Fogueira" method="_on_area_2d_body_shape_exited"]
