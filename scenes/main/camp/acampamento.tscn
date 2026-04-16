@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://bivx5nf0pi61s" path="res://scripts/global/character_body_2d.gd" id="6_em6kt"]
 [ext_resource type="Script" uid="uid://cro2ia4udnvq0" path="res://scripts/global/fogueira.gd" id="7_8iutl"]
 [ext_resource type="Texture2D" uid="uid://dkylaa7vp2626" path="res://assets/sprite/objects/fogueira_branco.png" id="7_e2i7t"]
+[ext_resource type="PackedScene" uid="uid://vb8t8oljqlrb" path="res://scenes/game/player/player.tscn" id="12_wrsmo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8iutl"]
 size = Vector2(54, 53)
@@ -2645,6 +2646,7 @@ position = Vector2(-2, 0)
 shape = SubResource("RectangleShape2D_8iutl")
 
 [node name="Player_provisorio" type="CharacterBody2D" parent="." unique_id=2075116241]
+visible = false
 position = Vector2(109, 552)
 script = ExtResource("6_em6kt")
 
@@ -2696,6 +2698,9 @@ visible = false
 layout_mode = 0
 offset_right = 229.0
 offset_bottom = 50.0
+
+[node name="Player" parent="." unique_id=1444451244 instance=ExtResource("12_wrsmo")]
+position = Vector2(269, 513)
 
 [connection signal="body_shape_entered" from="Background/Fogueira/Area2D" to="Background/Fogueira" method="_on_area_2d_body_shape_entered"]
 [connection signal="body_shape_exited" from="Background/Fogueira/Area2D" to="Background/Fogueira" method="_on_area_2d_body_shape_exited"]

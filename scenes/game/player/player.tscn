@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://vb8t8oljqlrb"]
 
 [ext_resource type="Script" uid="uid://dd0cdbtu0ynpv" path="res://scripts/global/player.gd" id="1_4m2od"]
+<<<<<<< Updated upstream
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a6wu5"]
 radius = 56.0
@@ -11,3 +12,75 @@ script = ExtResource("1_4m2od")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=457261676]
 shape = SubResource("CapsuleShape2D_a6wu5")
+=======
+[ext_resource type="Texture2D" uid="uid://c16muqugm5633" path="res://assets/sprite/player/player.png" id="2_t5cse"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a6wu5"]
+radius = 18.0
+height = 120.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bkoau"]
+atlas = ExtResource("2_t5cse")
+region = Rect2(0, 520, 449, 520)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_abehh"]
+atlas = ExtResource("2_t5cse")
+region = Rect2(452, 520, 449, 520)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_prej5"]
+atlas = ExtResource("2_t5cse")
+region = Rect2(904, 520, 449, 520)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dqfck"]
+atlas = ExtResource("2_t5cse")
+region = Rect2(1356, 520, 449, 520)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gmc11"]
+atlas = ExtResource("2_t5cse")
+region = Rect2(1808, 520, 449, 520)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gdbv0"]
+atlas = ExtResource("2_t5cse")
+region = Rect2(2260, 520, 449, 520)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6bxg8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bkoau")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_abehh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_prej5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dqfck")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gmc11")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gdbv0")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 4.0
+}]
+
+[node name="Player" type="CharacterBody2D" unique_id=1444451244]
+script = ExtResource("1_4m2od")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1644394241]
+shape = SubResource("CapsuleShape2D_a6wu5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1902537128]
+texture_filter = 1
+position = Vector2(-9, -9.000001)
+scale = Vector2(0.33296213, 0.2951923)
+sprite_frames = SubResource("SpriteFrames_6bxg8")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.23456226
+>>>>>>> Stashed changes
