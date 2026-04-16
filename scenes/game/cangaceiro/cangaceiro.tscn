@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://dblcr36x2eq2x"]
+
+[ext_resource type="Texture2D" uid="uid://dblpgoi2fmuso" path="res://assets/sprite/cangaceiro/cangaceiro.png" id="1_cjohl"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j0go7"]
+radius = 23.0
+height = 130.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1gs11"]
+atlas = ExtResource("1_cjohl")
+region = Rect2(0, 0, 455, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y1dhq"]
+atlas = ExtResource("1_cjohl")
+region = Rect2(455, 0, 455, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p3i1q"]
+atlas = ExtResource("1_cjohl")
+region = Rect2(910, 0, 455, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p14hc"]
+atlas = ExtResource("1_cjohl")
+region = Rect2(1365, 0, 455, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ouce5"]
+atlas = ExtResource("1_cjohl")
+region = Rect2(1820, 0, 455, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_13drh"]
+atlas = ExtResource("1_cjohl")
+region = Rect2(2275, 0, 455, 500)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j0go7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1gs11")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y1dhq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p3i1q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p14hc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ouce5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_13drh")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Cangaceiro" type="CharacterBody2D" unique_id=502561641]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=574803493]
+shape = SubResource("CapsuleShape2D_j0go7")
+disabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=713360696]
+position = Vector2(-9.536743e-07, 1.1920929e-07)
+scale = Vector2(0.2993132, 0.29525003)
+sprite_frames = SubResource("SpriteFrames_j0go7")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.955224
