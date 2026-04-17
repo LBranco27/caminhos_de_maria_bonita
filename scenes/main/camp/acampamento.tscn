@@ -2646,10 +2646,11 @@ shape = SubResource("RectangleShape2D_8iutl")
 position = Vector2(596, 510)
 
 [node name="Player" parent="." unique_id=1278146228 instance=ExtResource("12_wrsmo")]
-position = Vector2(164, 361)
+position = Vector2(164, 516.965)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1166440070]
 position = Vector2(0, -37)
+offset = Vector2(0, -178.355)
 script = ExtResource("8_hm2of")
 
 [node name="Ground" type="StaticBody2D" parent="." unique_id=2079568681]
