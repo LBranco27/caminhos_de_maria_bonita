@@ -5,20 +5,16 @@
 [ext_resource type="Texture2D" uid="uid://cuhih5ttibcif" path="res://assets/sprite/background/serras-removebg-preview.png" id="2_h3e5j"]
 [ext_resource type="Texture2D" uid="uid://mfpkdorvwyc3" path="res://assets/sprite/background/arvore (2).png" id="3_h3e5j"]
 [ext_resource type="Texture2D" uid="uid://b7dhs6t5cquj1" path="res://assets/sprite/background/moita_branco.png" id="3_q0j8p"]
-[ext_resource type="Texture2D" uid="uid://dapbxsm5yucw8" path="res://icon.svg" id="5_pt16l"]
 [ext_resource type="Texture2D" uid="uid://r3nxpjis0bm1" path="res://assets/sprite/background/barraca_branco.png" id="5_q0j8p"]
 [ext_resource type="Texture2D" uid="uid://bqc64a5ycihtx" path="res://assets/sprite/background/carne-removebg-preview.png" id="6_e2i7t"]
-[ext_resource type="Script" uid="uid://bivx5nf0pi61s" path="res://scripts/global/character_body_2d.gd" id="6_em6kt"]
 [ext_resource type="Script" uid="uid://cro2ia4udnvq0" path="res://scripts/global/fogueira.gd" id="7_8iutl"]
 [ext_resource type="Texture2D" uid="uid://dkylaa7vp2626" path="res://assets/sprite/objects/fogueira_branco.png" id="7_e2i7t"]
+[ext_resource type="Script" uid="uid://dd4fgm6ys0as6" path="res://scripts/main/camp/acampamento_camera.gd" id="8_hm2of"]
 [ext_resource type="PackedScene" uid="uid://vb8t8oljqlrb" path="res://scenes/game/player/player.tscn" id="12_wrsmo"]
 [ext_resource type="PackedScene" uid="uid://dblcr36x2eq2x" path="res://scenes/game/cangaceiro/cangaceiro.tscn" id="13_1avdw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8iutl"]
 size = Vector2(54, 53)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_em6kt"]
-size = Vector2(34, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sddih"]
 size = Vector2(2526, 85)
@@ -2652,20 +2648,9 @@ position = Vector2(596, 510)
 [node name="Player" parent="." unique_id=1278146228 instance=ExtResource("12_wrsmo")]
 position = Vector2(164, 361)
 
-[node name="Player_provisorio" type="CharacterBody2D" parent="." unique_id=2075116241]
-visible = false
-position = Vector2(109, 552)
-script = ExtResource("6_em6kt")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player_provisorio" unique_id=1791322381]
-shape = SubResource("RectangleShape2D_em6kt")
-
-[node name="Sprite2D" type="Sprite2D" parent="Player_provisorio" unique_id=1802857686]
-scale = Vector2(0.265625, 0.2758789)
-texture = ExtResource("5_pt16l")
-
-[node name="Camera2D" type="Camera2D" parent="Player_provisorio" unique_id=1166440070]
-position = Vector2(-4, -228)
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1166440070]
+position = Vector2(0, -37)
+script = ExtResource("8_hm2of")
 
 [node name="Ground" type="StaticBody2D" parent="." unique_id=2079568681]
 position = Vector2(1, 0)
@@ -2679,12 +2664,14 @@ tile_map_data = PackedByteArray("AAD2/yQAAAAGABUAAAD2/yUAAAAGABUAAAD2/yYAAAAGABU
 tile_set = SubResource("TileSet_sddih")
 
 [node name="Limite_0" type="StaticBody2D" parent="." unique_id=1668882129]
+unique_name_in_owner = true
 position = Vector2(-584, 306)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Limite_0" unique_id=1310574865]
 shape = SubResource("RectangleShape2D_q0j8p")
 
 [node name="Limite_1" type="StaticBody2D" parent="." unique_id=108975967]
+unique_name_in_owner = true
 position = Vector2(1362, 309)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Limite_1" unique_id=1039050934]
