@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://dnp53vub2wftx"]
+
+[ext_resource type="Script" uid="uid://b0ve47ugllhxm" path="res://scenes/system/scene_manager.gd" id="1_rbns0"]
+
+[sub_resource type="Animation" id="Animation_rbns0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_8jb3v"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_nraph"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8jb3v"]
+_data = {
+&"RESET": SubResource("Animation_rbns0"),
+&"fade_in": SubResource("Animation_8jb3v"),
+&"fade_out": SubResource("Animation_nraph")
+}
+
+[node name="SceneManager" type="CanvasLayer" unique_id=588749147]
+layer = 27
+script = ExtResource("1_rbns0")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=465969567]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1685184886]
+libraries/ = SubResource("AnimationLibrary_8jb3v")

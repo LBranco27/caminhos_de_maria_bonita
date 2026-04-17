@@ -7,7 +7,7 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_65b3l"]
 font = ExtResource("3_sk07m")
-font_size = 90
+font_size = 100
 font_color = Color(0.9463989, 0.9306624, 0.6325736, 1)
 outline_size = 10
 outline_color = Color(0, 0, 0, 1)
@@ -58,11 +58,13 @@ theme_override_constants/separation = 16
 [node name="start" type="Button" parent="CanvasLayer/left_side/menu/vbox_menu" unique_id=1921436190]
 layout_mode = 2
 theme = ExtResource("2_80ia5")
+theme_override_font_sizes/font_size = 90
 text = "Iniciar"
 
 [node name="exit" type="Button" parent="CanvasLayer/left_side/menu/vbox_menu" unique_id=1073640693]
 layout_mode = 2
 theme = ExtResource("2_80ia5")
+theme_override_font_sizes/font_size = 90
 text = "Sair"
 
 [node name="top_middle_side" type="MarginContainer" parent="CanvasLayer" unique_id=511540715]
