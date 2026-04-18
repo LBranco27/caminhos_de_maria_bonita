@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://vb8t8oljqlrb"]
 
 [ext_resource type="Texture2D" uid="uid://c16muqugm5633" path="res://assets/sprite/player/player.png" id="1_4m2od"]
-[ext_resource type="Script" uid="uid://dd0cdbtu0ynpv" path="res://scripts/global/player.gd" id="1_t5cse"]
+[ext_resource type="Script" uid="uid://dd0cdbtu0ynpv" path="res://scenes/game/player/player.gd" id="1_t5cse"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a6wu5"]
 radius = 23.0
@@ -57,6 +57,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t5cse"]
+size = Vector2(127, 127)
+
 [node name="Player" type="CharacterBody2D" unique_id=1278146228]
 script = ExtResource("1_t5cse")
 
@@ -69,3 +72,8 @@ scale = Vector2(0.29340658, 0.28637695)
 sprite_frames = SubResource("SpriteFrames_gdbv0")
 animation = &"idle"
 autoplay = "idle"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1961467764]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1035322614]
+shape = SubResource("RectangleShape2D_t5cse")
