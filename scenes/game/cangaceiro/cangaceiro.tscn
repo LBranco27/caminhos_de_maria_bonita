@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dblcr36x2eq2x"]
 
+[ext_resource type="Script" uid="uid://cfx7qh2oov748" path="res://scenes/game/cangaceiro/cangaceiro.gd" id="1_1gs11"]
 [ext_resource type="Texture2D" uid="uid://dblpgoi2fmuso" path="res://assets/sprite/cangaceiro/cangaceiro.png" id="1_cjohl"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j0go7"]
@@ -56,7 +57,11 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1gs11"]
+size = Vector2(72, 72)
+
 [node name="Cangaceiro" type="CharacterBody2D" unique_id=502561641]
+script = ExtResource("1_1gs11")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=574803493]
 shape = SubResource("CapsuleShape2D_j0go7")
@@ -69,3 +74,11 @@ sprite_frames = SubResource("SpriteFrames_j0go7")
 animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.955224
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1577171864]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1095979198]
+shape = SubResource("RectangleShape2D_1gs11")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

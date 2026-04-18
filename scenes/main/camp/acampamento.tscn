@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b7dhs6t5cquj1" path="res://assets/sprite/background/moita_branco.png" id="3_q0j8p"]
 [ext_resource type="Texture2D" uid="uid://r3nxpjis0bm1" path="res://assets/sprite/background/barraca_branco.png" id="5_q0j8p"]
 [ext_resource type="Texture2D" uid="uid://bqc64a5ycihtx" path="res://assets/sprite/background/carne-removebg-preview.png" id="6_e2i7t"]
-[ext_resource type="Script" uid="uid://cro2ia4udnvq0" path="res://scripts/global/fogueira.gd" id="7_8iutl"]
+[ext_resource type="Script" uid="uid://cro2ia4udnvq0" path="res://scripts/main/camp/fogueira.gd" id="7_8iutl"]
 [ext_resource type="Texture2D" uid="uid://dkylaa7vp2626" path="res://assets/sprite/objects/fogueira_branco.png" id="7_e2i7t"]
 [ext_resource type="Script" uid="uid://dd4fgm6ys0as6" path="res://scripts/main/camp/acampamento_camera.gd" id="8_hm2of"]
 [ext_resource type="PackedScene" uid="uid://vb8t8oljqlrb" path="res://scenes/game/player/player.tscn" id="12_wrsmo"]
@@ -2642,8 +2642,10 @@ texture = ExtResource("7_e2i7t")
 position = Vector2(-2, 0)
 shape = SubResource("RectangleShape2D_8iutl")
 
-[node name="Cangaceiro" parent="." unique_id=502561641 instance=ExtResource("13_1avdw")]
+[node name="Lampião" parent="." unique_id=502561641 instance=ExtResource("13_1avdw")]
 position = Vector2(596, 510)
+dialogic_identifier = "lampiao"
+interaction_timeline = "lampiao_c1_router"
 
 [node name="Player" parent="." unique_id=1278146228 instance=ExtResource("12_wrsmo")]
 position = Vector2(164, 516.965)

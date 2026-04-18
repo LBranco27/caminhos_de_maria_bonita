@@ -1,0 +1,5 @@
+if {c1.met_lampiao} == false:
+	set {c1.met_lampiao} = true
+	jump lampiao_c1_intro_once/
+	return
+jump lampiao_c1_idle_router/
