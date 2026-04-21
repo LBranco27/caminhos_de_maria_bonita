@@ -1,16 +1,17 @@
 [gd_scene format=4 uid="uid://xe47gg1wgkcn"]
 
 [ext_resource type="Script" uid="uid://ce1r3wpsokuxl" path="res://scenes/main/camp/acampamento.gd" id="1_1avdw"]
+[ext_resource type="Texture2D" uid="uid://cdjxlbafaxya4" path="res://assets/sprite/background/ceu_teste.png" id="1_1avdw"]
 [ext_resource type="Texture2D" uid="uid://c5qxagrk6qicv" path="res://assets/sprite/ground/chao.jpg" id="1_em6kt"]
-[ext_resource type="Texture2D" uid="uid://dfg83hbasu6qi" path="res://assets/sprite/background/ceu.jpg" id="1_f2weg"]
-[ext_resource type="Texture2D" uid="uid://cuhih5ttibcif" path="res://assets/sprite/background/serras-removebg-preview.png" id="2_h3e5j"]
-[ext_resource type="Texture2D" uid="uid://mfpkdorvwyc3" path="res://assets/sprite/background/arvore (2).png" id="3_h3e5j"]
-[ext_resource type="Texture2D" uid="uid://b7dhs6t5cquj1" path="res://assets/sprite/background/moita_branco.png" id="3_q0j8p"]
-[ext_resource type="Texture2D" uid="uid://r3nxpjis0bm1" path="res://assets/sprite/background/barraca_branco.png" id="5_q0j8p"]
-[ext_resource type="Texture2D" uid="uid://bqc64a5ycihtx" path="res://assets/sprite/background/carne-removebg-preview.png" id="6_e2i7t"]
+[ext_resource type="Texture2D" uid="uid://dkrste625rn72" path="res://assets/sprite/background/montanhas.png" id="2_1avdw"]
+[ext_resource type="Texture2D" uid="uid://o0lefo3orngo" path="res://assets/sprite/background/tree.png" id="3_1avdw"]
+[ext_resource type="Texture2D" uid="uid://daxgbqk7bho2t" path="res://assets/sprite/background/tree_2.png" id="4_1avdw"]
+[ext_resource type="Texture2D" uid="uid://dmkpbvp6hmtuf" path="res://assets/sprite/background/bush.png" id="5_1avdw"]
+[ext_resource type="Texture2D" uid="uid://dlhlrnl41uur7" path="res://assets/sprite/background/cabana_novo.png" id="6_1avdw"]
+[ext_resource type="Texture2D" uid="uid://0owyrkillmq" path="res://assets/sprite/background/carne_new.png" id="7_1avdw"]
 [ext_resource type="Script" uid="uid://cro2ia4udnvq0" path="res://scripts/main/camp/fogueira.gd" id="7_8iutl"]
-[ext_resource type="Texture2D" uid="uid://dkylaa7vp2626" path="res://assets/sprite/objects/fogueira_branco.png" id="7_e2i7t"]
 [ext_resource type="Script" uid="uid://dd4fgm6ys0as6" path="res://scripts/main/camp/acampamento_camera.gd" id="8_hm2of"]
+[ext_resource type="Texture2D" uid="uid://dvjtjn1yb5vn5" path="res://assets/sprite/objects/fogueira.png" id="8_wrsmo"]
 [ext_resource type="PackedScene" uid="uid://vb8t8oljqlrb" path="res://scenes/game/player/player.tscn" id="12_wrsmo"]
 [ext_resource type="PackedScene" uid="uid://dblcr36x2eq2x" path="res://scenes/game/cangaceiro/cangaceiro.tscn" id="13_1avdw"]
 
@@ -2560,8 +2561,9 @@ repeat_size = Vector2(1152, 0)
 repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Background/Ceu" unique_id=51283912]
-scale = Vector2(1.841853, 1.6638176)
-texture = ExtResource("1_f2weg")
+position = Vector2(0, -68)
+scale = Vector2(0.42043796, 0.41601565)
+texture = ExtResource("1_1avdw")
 centered = false
 
 [node name="Longe" type="Parallax2D" parent="Background" unique_id=953677298]
@@ -2570,9 +2572,9 @@ repeat_size = Vector2(1152, 0)
 repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Background/Longe" unique_id=1282148538]
-position = Vector2(0, -360)
-scale = Vector2(1.8354633, 4.0299144)
-texture = ExtResource("2_h3e5j")
+position = Vector2(0, 144.00002)
+scale = Vector2(1.44, 2.1412172)
+texture = ExtResource("2_1avdw")
 centered = false
 
 [node name="Arvores" type="Parallax2D" parent="Background" unique_id=599004179]
@@ -2581,15 +2583,15 @@ repeat_size = Vector2(1152, 0)
 repeat_times = 3
 
 [node name="Tree" type="Sprite2D" parent="Background/Arvores" unique_id=1468393464]
-position = Vector2(136, 491)
-scale = Vector2(0.22954714, 0.20808077)
-texture = ExtResource("3_h3e5j")
+position = Vector2(132.00002, 428.00003)
+scale = Vector2(0.095877275, 0.092285156)
+texture = ExtResource("3_1avdw")
 centered = false
 
 [node name="Tree2" type="Sprite2D" parent="Background/Arvores" unique_id=506969388]
-position = Vector2(852, 491)
-scale = Vector2(0.22954714, 0.20808077)
-texture = ExtResource("3_h3e5j")
+position = Vector2(824.00006, 455)
+scale = Vector2(0.06615529, 0.060058586)
+texture = ExtResource("4_1avdw")
 centered = false
 
 [node name="Moitas" type="Parallax2D" parent="Background" unique_id=1736704883]
@@ -2598,45 +2600,46 @@ repeat_size = Vector2(1152, 0)
 repeat_times = 3
 
 [node name="Bush" type="Sprite2D" parent="Background/Moitas" unique_id=916438281]
-position = Vector2(70, 562)
+position = Vector2(69.00001, 551)
 scale = Vector2(0.07716053, 0.077160515)
-texture = ExtResource("3_q0j8p")
+texture = ExtResource("5_1avdw")
 
 [node name="Bush2" type="Sprite2D" parent="Background/Moitas" unique_id=298548653]
-position = Vector2(314, 564)
+position = Vector2(317.00003, 553)
 scale = Vector2(0.07716053, 0.077160515)
-texture = ExtResource("3_q0j8p")
+texture = ExtResource("5_1avdw")
 
 [node name="Bush3" type="Sprite2D" parent="Background/Moitas" unique_id=1461133620]
-position = Vector2(634, 562)
+position = Vector2(633.00006, 553)
 scale = Vector2(0.07716053, 0.077160515)
-texture = ExtResource("3_q0j8p")
+texture = ExtResource("5_1avdw")
 
 [node name="Cabana" type="Parallax2D" parent="Background" unique_id=161501100]
 scroll_scale = Vector2(0.95, 1)
 scroll_offset = Vector2(491, 500)
 
 [node name="Sprite2D" type="Sprite2D" parent="Background/Cabana" unique_id=1029972104]
-position = Vector2(-3.0000005, 48)
-scale = Vector2(0.15046301, 0.150463)
-texture = ExtResource("5_q0j8p")
+position = Vector2(-57.173584, 15.875)
+scale = Vector2(0.29341337, 0.27739188)
+texture = ExtResource("6_1avdw")
 
 [node name="Carne" type="Parallax2D" parent="Background" unique_id=610219055]
 scroll_scale = Vector2(0.95, 1)
 scroll_offset = Vector2(1080, 562)
 
 [node name="Sprite2D" type="Sprite2D" parent="Background/Carne" unique_id=1831004031]
-scale = Vector2(0.15046301, 0.150463)
-texture = ExtResource("6_e2i7t")
+position = Vector2(-49, -23)
+scale = Vector2(0.045959342, 0.053259995)
+texture = ExtResource("7_1avdw")
 
 [node name="Fogueira" type="Parallax2D" parent="Background" unique_id=1161509030]
 scroll_offset = Vector2(701, 554)
 script = ExtResource("7_8iutl")
 
 [node name="Sprite2D" type="Sprite2D" parent="Background/Fogueira" unique_id=397666316]
-position = Vector2(0, 1)
-scale = Vector2(0.118441395, 0.11844139)
-texture = ExtResource("7_e2i7t")
+position = Vector2(-0.5, 0.5)
+scale = Vector2(0.037871942, 0.03857415)
+texture = ExtResource("8_wrsmo")
 
 [node name="Area2D" type="Area2D" parent="Background/Fogueira" unique_id=281680290]
 
