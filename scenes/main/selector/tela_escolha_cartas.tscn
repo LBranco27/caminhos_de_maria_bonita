@@ -21,7 +21,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_svjsa")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1165880362]
+[node name="Fundo" type="ColorRect" parent="." unique_id=1165880362]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

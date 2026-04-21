@@ -40,4 +40,5 @@ Sussurros ao pé do ouvido que moldam o destino do bando. Entre um conselho e ou
 
 #adicionar carta no baralho, impedir que uma carta seja seleciona duas vezes
 func _on_selecionar_pressed():
+	Baralho.adicionar_carta(carta)
 	pass # Replace with function body.

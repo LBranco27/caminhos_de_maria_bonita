@@ -15,6 +15,10 @@ run/main_scene="uid://36da2jdlh7wo"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Baralho="*uid://56t21ksokf2u"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
