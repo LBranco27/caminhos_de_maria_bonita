@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://36da2jdlh7wo"]
 
 [ext_resource type="Texture2D" uid="uid://ccx6rxpsyhqyd" path="res://assets/card/cartas_pro/cordel1.jpg" id="1_dg6yv"]
+<<<<<<< Updated upstream
+=======
+[ext_resource type="Script" uid="uid://coedc0vskdjoo" path="res://scripts/misc/tela_escolha_cartas.gd" id="1_svjsa"]
+>>>>>>> Stashed changes
 [ext_resource type="Texture2D" uid="uid://dlw74rsh4putj" path="res://assets/card/cartas_pro/cordel3.jpg" id="2_svjsa"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ektv5"]

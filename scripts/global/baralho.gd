@@ -5,12 +5,20 @@ var deck: Array = []
 var mao: Array = []
 var descarte: Array = []
 
+var consequencia = 0
+var escolha
+
+var influencia = 0
+var recursos = 0
+var armamentos = 0
+
 var limite_mao: int = 5
 
 
 func _ready() -> void:
+	deck.clear()
 	inicializar_cartas()
-	inicializar_deck()
+	#inicializar_deck()
 	embaralhar_deck()
 
 
@@ -156,3 +164,27 @@ func quantidade_mao() -> int:
 
 func quantidade_descarte() -> int:
 	return descarte.size()
+
+func processar_carta():
+	for x in deck:
+		escolha = 0
+		if x == 1:
+			recursos += 10
+		elif x == 2:
+			armamentos += 10
+		elif x == 3:
+			$Tela_escolha.visible = true
+			await $Tela_escolha.escolha_feita
+			if escolha == 1:
+				influencia += 5
+			elif escolha == 2:
+				influencia += 10
+	if armamentos == 10 and recursos == 10 and influencia == 5:
+		consequencia = 1
+	elif armamentos == 10 and recursos == 10 and influencia == 10:
+		consequencia = 2
+	deck.clear() 
+
+func adicionar_carta(id):
+	if deck.size() < 3:
+		deck.append(id)
