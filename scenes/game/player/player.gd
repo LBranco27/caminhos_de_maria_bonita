@@ -16,6 +16,7 @@ func _ready() -> void:
 		Dialogic.timeline_ended.connect(_on_dialogic_timeline_ended)
 
 
+
 func _physics_process(delta: float) -> void:
 	if dialog_active:
 		velocity = Vector2.ZERO

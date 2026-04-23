@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://xe47gg1wgkcn"]
 
+[ext_resource type="Script" uid="uid://ce1r3wpsokuxl" path="res://scenes/main/camp/acampamento.gd" id="1_1avdw"]
 [ext_resource type="Texture2D" uid="uid://c5qxagrk6qicv" path="res://assets/sprite/ground/chao.jpg" id="1_em6kt"]
 [ext_resource type="Texture2D" uid="uid://dfg83hbasu6qi" path="res://assets/sprite/background/ceu.jpg" id="1_f2weg"]
 [ext_resource type="Texture2D" uid="uid://cuhih5ttibcif" path="res://assets/sprite/background/serras-removebg-preview.png" id="2_h3e5j"]
@@ -2549,6 +2550,7 @@ sources/0 = SubResource("TileSetAtlasSource_em6kt")
 size = Vector2(20, 611)
 
 [node name="Acampamento" type="Node2D" unique_id=2024251218]
+script = ExtResource("1_1avdw")
 
 [node name="Background" type="Node2D" parent="." unique_id=787029193]
 
