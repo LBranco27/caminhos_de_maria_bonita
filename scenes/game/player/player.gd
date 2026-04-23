@@ -14,15 +14,7 @@ func _ready() -> void:
 		Dialogic.timeline_started.connect(_on_dialogic_timeline_started)
 	if not Dialogic.timeline_ended.is_connected(_on_dialogic_timeline_ended):
 		Dialogic.timeline_ended.connect(_on_dialogic_timeline_ended)
-	
-	print("Teste do baralho")
-	print("Quantidade no deck:", baralho.quantidade_deck())
 
-	var carta = baralho.comprar_carta()
-	print("Carta comprada:", carta)
-
-	print("Deck depois:", baralho.quantidade_deck())
-	print("Mão:", baralho.get_mao())
 
 
 func _physics_process(delta: float) -> void:
