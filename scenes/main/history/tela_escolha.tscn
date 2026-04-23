@@ -1,10 +1,8 @@
 [gd_scene format=3 uid="uid://dwq4bv0ahj4yn"]
 
 [ext_resource type="Script" uid="uid://jgg3hojxtae8" path="res://scripts/misc/tela_escolha.gd" id="1_he3o1"]
-[ext_resource type="Texture2D" uid="uid://ccx6rxpsyhqyd" path="res://assets/card/cartas_pro/cordel1.jpg" id="1_nsh4l"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_he3o1"]
-load_path = "res://.godot/imported/cordel2.jpg-9b60fade0a78e12e89cbbcd5828522a3.ctex"
+[ext_resource type="Texture2D" uid="uid://b13op47vaykup" path="res://assets/card/cartas_pro/cordel4.jpg" id="2_dk0qj"]
+[ext_resource type="Texture2D" uid="uid://3cbf24gacaa8" path="res://assets/card/cartas_pro/cordel5.png" id="3_hvhnd"]
 
 [node name="Tela_escolha" type="Control" unique_id=983648306]
 layout_mode = 3
@@ -34,7 +32,7 @@ alignment = 1
 [node name="Opcao1" type="Button" parent="HBoxContainer" unique_id=641316041]
 custom_minimum_size = Vector2(500, 540)
 layout_mode = 2
-icon = ExtResource("1_nsh4l")
+icon = ExtResource("2_dk0qj")
 flat = true
 expand_icon = true
 
@@ -42,7 +40,7 @@ expand_icon = true
 custom_minimum_size = Vector2(500, 450)
 layout_mode = 2
 size_flags_horizontal = 4
-icon = SubResource("CompressedTexture2D_he3o1")
+icon = ExtResource("3_hvhnd")
 flat = true
 expand_icon = true
 

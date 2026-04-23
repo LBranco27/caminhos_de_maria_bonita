@@ -60,6 +60,7 @@ offset_right = 500.0
 offset_bottom = -28.0
 grow_horizontal = 2
 grow_vertical = 0
+flat = true
 
 [node name="Texto" type="RichTextLabel" parent="Panel" unique_id=1485369897]
 layout_mode = 1

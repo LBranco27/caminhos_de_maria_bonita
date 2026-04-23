@@ -48,4 +48,4 @@ func _on_selecionar_pressed():
 		$HBoxContainer/Carta3.visible = false
 	popup.visible = false
 	if Baralho.deck.size() == 3:
-		SceneManager.change_scene(res://scenes/main/history/tela_consequencias.tscn)
+		SceneManager.change_scene("res://scenes/main/history/tela_consequencias.tscn")

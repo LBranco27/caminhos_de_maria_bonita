@@ -21,6 +21,7 @@ GameState="*uid://cdm3qxb587y0u"
 baralho="*uid://b5vb3wyf5bpui"
 SceneManager="*uid://dnp53vub2wftx"
 Dialogic="*uid://ds2q0uclmolvu"
+Baralho="*uid://ev8tmsfxbxh3"
 
 [dialogic]
 
