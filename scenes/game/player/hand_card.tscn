@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://c3d8p5w2x508w"]
+
+[node name="hand_card" type="TextureRect" unique_id=1908482881]
+custom_minimum_size = Vector2(150, 200)
+offset_right = 40.0
+offset_bottom = 40.0
+expand_mode = 1

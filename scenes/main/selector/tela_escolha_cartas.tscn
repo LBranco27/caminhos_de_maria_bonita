@@ -1,10 +1,16 @@
 [gd_scene format=3 uid="uid://36da2jdlh7wo"]
 
 [ext_resource type="Texture2D" uid="uid://ccx6rxpsyhqyd" path="res://assets/card/cartas_pro/cordel1.jpg" id="1_dg6yv"]
+[ext_resource type="Script" uid="uid://coedc0vskdjoo" path="res://scripts/misc/tela_escolha_cartas.gd" id="1_svjsa"]
 [ext_resource type="Texture2D" uid="uid://dlw74rsh4putj" path="res://assets/card/cartas_pro/cordel3.jpg" id="2_svjsa"]
+[ext_resource type="Texture2D" uid="uid://dapbxsm5yucw8" path="res://icon.svg" id="4_ektv5"]
+[ext_resource type="FontFile" uid="uid://wcgqx173anbs" path="res://assets/font/xilosa_.ttf" id="4_lly7v"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ektv5"]
 load_path = "res://.godot/imported/cordel2.jpg-9b60fade0a78e12e89cbbcd5828522a3.ctex"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dg6yv"]
+bg_color = Color(0, 0, 0, 0.9254902)
 
 [node name="TelaEscolhaCartas" type="Control" unique_id=388727841]
 layout_mode = 3
@@ -13,15 +19,25 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_svjsa")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1165880362]
+[node name="Fundo" type="ColorRect" parent="." unique_id=1165880362]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.083911665, 0.083911665, 0.083911665, 1)
+color = Color(0.08235294, 0.08235294, 0.08235294, 0.49803922)
+
+[node name="FecharCartas" type="Button" parent="." unique_id=711750433]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=524270516]
 layout_mode = 1
@@ -30,30 +46,121 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -350.0
-offset_top = -150.0
-offset_right = 350.0
-offset_bottom = 150.0
+offset_left = -400.0
+offset_top = -200.0
+offset_right = 400.0
+offset_bottom = 200.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 60
 alignment = 1
 
 [node name="Carta1" type="Button" parent="HBoxContainer" unique_id=1590636322]
-custom_minimum_size = Vector2(200, 200)
+custom_minimum_size = Vector2(250, 400)
 layout_mode = 2
 icon = ExtResource("1_dg6yv")
 expand_icon = true
 
 [node name="Carta2" type="Button" parent="HBoxContainer" unique_id=874146177]
-custom_minimum_size = Vector2(200, 300)
+custom_minimum_size = Vector2(250, 400)
 layout_mode = 2
 size_flags_horizontal = 4
 icon = SubResource("CompressedTexture2D_ektv5")
 expand_icon = true
 
 [node name="Carta3" type="Button" parent="HBoxContainer" unique_id=177429468]
-custom_minimum_size = Vector2(200, 300)
+custom_minimum_size = Vector2(250, 400)
 layout_mode = 2
 icon = ExtResource("2_svjsa")
 expand_icon = true
+
+[node name="DetalheCarta" type="Panel" parent="." unique_id=80034359]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -435.0
+offset_top = -200.0
+offset_right = 435.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_dg6yv")
+
+[node name="Carta" type="TextureRect" parent="DetalheCarta" unique_id=1802334152]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -435.0
+offset_top = -200.0
+offset_right = -135.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="Descricao" type="RichTextLabel" parent="DetalheCarta" unique_id=1700040841]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.0
+offset_top = -200.0
+offset_right = 434.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(1, 1, 0.24313726, 1)
+theme_override_fonts/normal_font = ExtResource("4_lly7v")
+bbcode_enabled = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cancelar" type="Button" parent="DetalheCarta" unique_id=1730418905]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -81.0
+offset_top = -77.0
+offset_right = -31.0
+offset_bottom = -27.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/icon_normal_color = Color(1, 0, 0.023529412, 1)
+icon = ExtResource("4_ektv5")
+expand_icon = true
+
+[node name="Selecionar" type="Button" parent="DetalheCarta" unique_id=1366860884]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -182.0
+offset_top = -78.0
+offset_right = -132.0
+offset_bottom = -28.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/icon_normal_color = Color(0, 1, 0, 1)
+icon = ExtResource("4_ektv5")
+expand_icon = true
+
+[connection signal="pressed" from="FecharCartas" to="." method="_on_fechar_cartas_pressed"]
+[connection signal="pressed" from="HBoxContainer/Carta1" to="." method="_on_carta_1_pressed"]
+[connection signal="pressed" from="HBoxContainer/Carta2" to="." method="_on_carta_2_pressed"]
+[connection signal="pressed" from="HBoxContainer/Carta3" to="." method="_on_carta_3_pressed"]
+[connection signal="pressed" from="DetalheCarta/Cancelar" to="." method="_on_cancelar_pressed"]
+[connection signal="pressed" from="DetalheCarta/Selecionar" to="." method="_on_selecionar_pressed"]

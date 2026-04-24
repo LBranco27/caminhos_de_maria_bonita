@@ -18,9 +18,9 @@ config/icon="res://icon.svg"
 [autoload]
 
 GameState="*uid://cdm3qxb587y0u"
-baralho="*uid://b5vb3wyf5bpui"
 SceneManager="*uid://dnp53vub2wftx"
 Dialogic="*uid://ds2q0uclmolvu"
+Baralho="*uid://ev8tmsfxbxh3"
 
 [dialogic]
 
@@ -29,6 +29,21 @@ directories/dch_directory={
 "maria_bonita": "res://assets/dialogic/characters/maria_bonita.dch"
 }
 directories/dtl_directory={
+"aconselhar": "res://assets/dialogic/timelines/choices/aconselhar.dtl",
+"corisco_c2_idle_a": "res://assets/dialogic/timelines/repeatable/chats/corisco_c2_idle_a.dtl",
+"corisco_c2_idle_b": "res://assets/dialogic/timelines/repeatable/chats/corisco_c2_idle_b.dtl",
+"corisco_c2_idle_c": "res://assets/dialogic/timelines/repeatable/chats/corisco_c2_idle_c.dtl",
+"corisco_c2_idle_router": "res://assets/dialogic/timelines/repeatable/corisco_c2_idle_router.dtl",
+"corisco_c2_intro_once": "res://assets/dialogic/timelines/once/corisco_c2_intro_once.dtl",
+"corisco_c2_router": "res://assets/dialogic/timelines/condition/corisco_c2_router.dtl",
+"equipamentos": "res://assets/dialogic/timelines/choices/equipamentos.dtl",
+"ervas": "res://assets/dialogic/timelines/choices/ervas.dtl",
+"jesuino_c2_idle_a": "res://assets/dialogic/timelines/repeatable/chats/jesuino_c2_idle_a.dtl",
+"jesuino_c2_idle_b": "res://assets/dialogic/timelines/repeatable/chats/jesuino_c2_idle_b.dtl",
+"jesuino_c2_idle_c": "res://assets/dialogic/timelines/repeatable/chats/jesuino_c2_idle_c.dtl",
+"jesuino_c2_idle_router": "res://assets/dialogic/timelines/repeatable/jesuino_c2_idle_router.dtl",
+"jesuino_c2_intro_once": "res://assets/dialogic/timelines/once/jesuino_c2_intro_once.dtl",
+"jesuino_c2_router": "res://assets/dialogic/timelines/condition/jesuino_c2_router.dtl",
 "lampiao_c1_idle_a": "res://assets/dialogic/timelines/repeatable/chats/lampiao_c1_idle_a.dtl",
 "lampiao_c1_idle_b": "res://assets/dialogic/timelines/repeatable/chats/lampiao_c1_idle_b.dtl",
 "lampiao_c1_idle_c": "res://assets/dialogic/timelines/repeatable/chats/lampiao_c1_idle_c.dtl",
@@ -36,7 +51,10 @@ directories/dtl_directory={
 "lampiao_c1_intro_once": "res://assets/dialogic/timelines/once/lampiao_c1_intro_once.dtl",
 "lampiao_c1_router": "res://assets/dialogic/timelines/condition/lampiao_c1_router.dtl"
 }
-layout/style_directory={}
+layout/style_directory={
+"": "res://assets/dialogic_styles/New_File.tres",
+"New_File": "res://assets/dialogic_styles/New_File.tres"
+}
 variables={
 "c1": {
 "lampiao_idle_roll": 0,
@@ -77,8 +95,8 @@ audio/channel_defaults={
 }
 }
 glossary/default_case_sensitive=true
-layout/style_list=[]
-layout/default_style="Default"
+layout/style_list=["res://assets/dialogic_styles/New_File.tres"]
+layout/default_style="res://assets/dialogic_styles/New_File.tres"
 
 [editor_plugins]
 

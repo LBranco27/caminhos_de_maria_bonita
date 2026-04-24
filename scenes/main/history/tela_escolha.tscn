@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://dwq4bv0ahj4yn"]
+
+[ext_resource type="Script" uid="uid://jgg3hojxtae8" path="res://scripts/misc/tela_escolha.gd" id="1_he3o1"]
+[ext_resource type="Texture2D" uid="uid://b13op47vaykup" path="res://assets/card/cartas_pro/cordel4.jpg" id="2_dk0qj"]
+[ext_resource type="Texture2D" uid="uid://3cbf24gacaa8" path="res://assets/card/cartas_pro/cordel5.png" id="3_hvhnd"]
+
+[node name="Tela_escolha" type="Control" unique_id=983648306]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_he3o1")
+
+[node name="Fundo" type="ColorRect" parent="." unique_id=1048517590]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.08235294, 0.08235294, 0.08235294, 0.49803922)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=2125198344]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -518.5
+offset_top = -270.0
+offset_right = 518.5
+offset_bottom = 270.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 60
+alignment = 1
+
+[node name="Opcao1" type="Button" parent="HBoxContainer" unique_id=641316041]
+custom_minimum_size = Vector2(500, 540)
+layout_mode = 2
+icon = ExtResource("2_dk0qj")
+flat = true
+expand_icon = true
+
+[node name="Opcao2" type="Button" parent="HBoxContainer" unique_id=121129087]
+custom_minimum_size = Vector2(500, 450)
+layout_mode = 2
+size_flags_horizontal = 4
+icon = ExtResource("3_hvhnd")
+flat = true
+expand_icon = true
+
+[connection signal="pressed" from="HBoxContainer/Opcao1" to="." method="_on_opcao_1_pressed"]
+[connection signal="pressed" from="HBoxContainer/Opcao2" to="." method="_on_opcao_2_pressed"]
