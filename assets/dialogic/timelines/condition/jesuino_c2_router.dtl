@@ -1,0 +1,5 @@
+if {c2.met_jesuino} == false:
+	set {c2.met_jesuino} = true
+	jump jesuino_c2_intro_once/
+	return
+jump jesuino_c2_idle_router/

@@ -14,11 +14,12 @@ var armamentos = 0
 
 var limite_mao: int = 5
 
+var current_player
+
 
 func _ready() -> void:
-	deck.clear()
 	inicializar_cartas()
-	#inicializar_deck()
+	inicializar_deck()
 	embaralhar_deck()
 
 
@@ -26,36 +27,42 @@ func inicializar_cartas() -> void:
 	cartas_disponiveis = [
 		{
 			"id": 1,
-			"nome": "Ataque do Cangaço",
-			"descricao": "Causa impacto ofensivo no turno.",
+			"nome": "Procurar ervas medicinais",
+			"descricao": "...",
 			"tipo": "ataque",
-			"valor": 2
+			"valor": 2,
+			"image": "res://assets/card/cartas_pro/cordel1.jpg",
+			"choice": false
 		},
 		{
 			"id": 2,
-			"nome": "Reforçar Acampamento",
-			"descricao": "Melhora a defesa do grupo.",
+			"nome": "Cuidar das roupas e equipamentos",
+			"descricao": "...",
 			"tipo": "defesa",
-			"valor": 3
+			"valor": 3,
+			"image": "res://assets/card/cartas_pro/cordel2.jpg",
+			"choice": true
 		},
 		{
 			"id": 3,
-			"nome": "Ajuda do Povoado",
-			"descricao": "Gera apoio e recursos.",
+			"nome": "Aconselhar Lampião",
+			"descricao": "...",
 			"tipo": "suporte",
-			"valor": 1
+			"valor": 1,
+			"image": "res://assets/card/cartas_pro/cordel3.jpg",
+			"choice": false
 		},
 		{
 			"id": 4,
-			"nome": "Emboscada",
-			"descricao": "Ação surpresa contra inimigos.",
+			"nome": "Aconselhar Lampião",
+			"descricao": "...",
 			"tipo": "ataque",
 			"valor": 4
 		},
 		{
 			"id": 5,
 			"nome": "Descanso Estratégico",
-			"descricao": "Recupera fôlego para o próximo turno.",
+			"descricao": "...",
 			"tipo": "suporte",
 			"valor": 2
 		}
@@ -166,5 +173,14 @@ func quantidade_descarte() -> int:
 	return descarte.size() 
 
 func adicionar_carta(id):
-	if deck.size() < 3:
-		deck.append(id)
+	for card in cartas_disponiveis:
+		if card.id == id:
+			mao.append(card)
+			return
+			
+
+func resolve_hand_cards():
+	await SceneManager.show_resolving_cards()
+	for card in mao:
+		if card.choice:
+			current_player.invoke_choice(card.id)

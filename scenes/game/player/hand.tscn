@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://b763tgisdoujt"]
+
+[ext_resource type="Script" uid="uid://dl0gqu1dc1vns" path="res://scenes/game/player/hand.gd" id="1_n3prj"]
+[ext_resource type="PackedScene" uid="uid://c3d8p5w2x508w" path="res://scenes/game/player/hand_card.tscn" id="2_vr3gq"]
+[ext_resource type="Texture2D" uid="uid://ccx6rxpsyhqyd" path="res://assets/card/cartas_pro/cordel1.jpg" id="3_joqfu"]
+
+[node name="hand" type="Control" unique_id=981419254]
+layout_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -302.0
+offset_top = -159.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("1_n3prj")
+
+[node name="hand_hbox" type="HBoxContainer" parent="." unique_id=255457779]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = -91
+
+[node name="hand_card" parent="hand_hbox" unique_id=1908482881 instance=ExtResource("2_vr3gq")]
+visible = false
+layout_mode = 2
+texture = ExtResource("3_joqfu")
+expand_mode = 1
+
+[node name="hand_card2" parent="hand_hbox" unique_id=667041723 instance=ExtResource("2_vr3gq")]
+visible = false
+layout_mode = 2
+texture = ExtResource("3_joqfu")
+expand_mode = 1

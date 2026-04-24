@@ -9,15 +9,11 @@
 [ext_resource type="Texture2D" uid="uid://dmkpbvp6hmtuf" path="res://assets/sprite/background/bush.png" id="5_1avdw"]
 [ext_resource type="Texture2D" uid="uid://dlhlrnl41uur7" path="res://assets/sprite/background/cabana_novo.png" id="6_1avdw"]
 [ext_resource type="Texture2D" uid="uid://0owyrkillmq" path="res://assets/sprite/background/carne_new.png" id="7_1avdw"]
-[ext_resource type="Script" uid="uid://cro2ia4udnvq0" path="res://scripts/main/camp/fogueira.gd" id="7_8iutl"]
 [ext_resource type="Script" uid="uid://dd4fgm6ys0as6" path="res://scripts/main/camp/acampamento_camera.gd" id="8_hm2of"]
-[ext_resource type="Texture2D" uid="uid://dvjtjn1yb5vn5" path="res://assets/sprite/objects/fogueira.png" id="8_wrsmo"]
+[ext_resource type="PackedScene" uid="uid://b8cpg7se0ee1y" path="res://scenes/main/camp/fogueira.tscn" id="9_a7a0x"]
 [ext_resource type="PackedScene" uid="uid://vb8t8oljqlrb" path="res://scenes/game/player/player.tscn" id="12_wrsmo"]
 [ext_resource type="PackedScene" uid="uid://dblcr36x2eq2x" path="res://scenes/game/cangaceiro/cangaceiro.tscn" id="13_1avdw"]
 [ext_resource type="Texture2D" uid="uid://dfidvn0pb8rb6" path="res://assets/sprite/ground/chao_noite.jpg" id="15_gdq3m"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8iutl"]
-size = Vector2(54, 53)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sddih"]
 size = Vector2(2526, 85)
@@ -5140,6 +5136,7 @@ scale = Vector2(0.07716053, 0.077160515)
 texture = ExtResource("5_1avdw")
 
 [node name="Cabana" type="Parallax2D" parent="Background" unique_id=161501100]
+unique_name_in_owner = true
 scroll_scale = Vector2(0.95, 1)
 scroll_offset = Vector2(491, 500)
 
@@ -5149,6 +5146,7 @@ scale = Vector2(0.29341337, 0.27739188)
 texture = ExtResource("6_1avdw")
 
 [node name="Carne" type="Parallax2D" parent="Background" unique_id=610219055]
+unique_name_in_owner = true
 scroll_scale = Vector2(0.95, 1)
 scroll_offset = Vector2(1080, 562)
 
@@ -5157,27 +5155,32 @@ position = Vector2(-49, -23)
 scale = Vector2(0.045959342, 0.053259995)
 texture = ExtResource("7_1avdw")
 
-[node name="Fogueira" type="Parallax2D" parent="Background" unique_id=1161509030]
-scroll_offset = Vector2(701, 554)
-script = ExtResource("7_8iutl")
-
-[node name="Sprite2D" type="Sprite2D" parent="Background/Fogueira" unique_id=397666316]
-position = Vector2(-0.5, 0.5)
-scale = Vector2(0.037871942, 0.03857415)
-texture = ExtResource("8_wrsmo")
-
-[node name="Area2D" type="Area2D" parent="Background/Fogueira" unique_id=281680290]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Fogueira/Area2D" unique_id=250419718]
-position = Vector2(-2, 0)
-shape = SubResource("RectangleShape2D_8iutl")
+[node name="Fogueira" parent="Background" unique_id=1114000139 instance=ExtResource("9_a7a0x")]
 
 [node name="Lampião" parent="." unique_id=502561641 instance=ExtResource("13_1avdw")]
+unique_name_in_owner = true
 position = Vector2(596, 510)
 dialogic_identifier = "lampiao"
 interaction_timeline = "lampiao_c1_router"
 
+[node name="Jesuino" parent="." unique_id=869045088 instance=ExtResource("13_1avdw")]
+unique_name_in_owner = true
+visible = false
+modulate = Color(0, 1, 0.45490196, 1)
+position = Vector2(-34, 510)
+dialogic_identifier = "jesuino"
+interaction_timeline = "jesuino_c2_router"
+
+[node name="Corisco" parent="." unique_id=936688520 instance=ExtResource("13_1avdw")]
+unique_name_in_owner = true
+visible = false
+modulate = Color(1, 0.59607846, 0, 1)
+position = Vector2(-232, 508)
+dialogic_identifier = "corisco"
+interaction_timeline = "corisco_c2_router"
+
 [node name="Player" parent="." unique_id=1278146228 instance=ExtResource("12_wrsmo")]
+unique_name_in_owner = true
 position = Vector2(164, 516.965)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1166440070]
@@ -5225,6 +5228,3 @@ visible = false
 layout_mode = 0
 offset_right = 229.0
 offset_bottom = 50.0
-
-[connection signal="body_shape_entered" from="Background/Fogueira/Area2D" to="Background/Fogueira" method="_on_area_2d_body_shape_entered"]
-[connection signal="body_shape_exited" from="Background/Fogueira/Area2D" to="Background/Fogueira" method="_on_area_2d_body_shape_exited"]

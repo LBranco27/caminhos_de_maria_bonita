@@ -5,6 +5,10 @@ extends Control
 @onready var popup_texto = $DetalheCarta/Descricao
 
 var carta = 0
+signal card_chosen
+
+func initialize_selection():
+	show()
 
 func mostrar_pop_up(arte, descricao):
 	popup_imagem.texture = arte
@@ -44,8 +48,12 @@ func _on_selecionar_pressed():
 		$HBoxContainer/Carta1.visible = false
 	elif carta == 2:
 		$HBoxContainer/Carta2.visible = false
+		GameState.karma -= 1
 	elif carta == 3:
 		$HBoxContainer/Carta3.visible = false
+		GameState.karma += 1
 	popup.visible = false
-	if Baralho.deck.size() == 3:
-		SceneManager.change_scene("res://scenes/main/history/tela_consequencias.tscn")
+	hide()
+	card_chosen.emit()
+	#if Baralho.deck.size() == 3:
+		#SceneManager.change_scene("res://scenes/main/history/tela_consequencias.tscn")

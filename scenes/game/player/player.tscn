@@ -2,6 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://c16muqugm5633" path="res://assets/sprite/player/player.png" id="1_4m2od"]
 [ext_resource type="Script" uid="uid://dd0cdbtu0ynpv" path="res://scenes/game/player/player.gd" id="1_t5cse"]
+[ext_resource type="PackedScene" uid="uid://cnc4dy8p3sebx" path="res://scenes/main/history/tela_consequencias.tscn" id="2_prej5"]
+[ext_resource type="PackedScene" uid="uid://dwq4bv0ahj4yn" path="res://scenes/main/history/tela_escolha.tscn" id="3_dqfck"]
+[ext_resource type="PackedScene" uid="uid://36da2jdlh7wo" path="res://scenes/main/selector/tela_escolha_cartas.tscn" id="4_gmc11"]
+[ext_resource type="PackedScene" uid="uid://b763tgisdoujt" path="res://scenes/game/player/hand.tscn" id="5_dqfck"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a6wu5"]
 radius = 23.0
@@ -62,6 +66,23 @@ size = Vector2(127, 127)
 
 [node name="Player" type="CharacterBody2D" unique_id=1278146228]
 script = ExtResource("1_t5cse")
+
+[node name="player_ui" type="CanvasLayer" parent="." unique_id=522501052]
+
+[node name="hand" parent="player_ui" unique_id=981419254 instance=ExtResource("5_dqfck")]
+unique_name_in_owner = true
+
+[node name="consequence" parent="player_ui" unique_id=259635058 instance=ExtResource("2_prej5")]
+unique_name_in_owner = true
+visible = false
+
+[node name="choice" parent="player_ui" unique_id=983648306 instance=ExtResource("3_dqfck")]
+unique_name_in_owner = true
+visible = false
+
+[node name="card_selection" parent="player_ui" unique_id=388727841 instance=ExtResource("4_gmc11")]
+unique_name_in_owner = true
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=457261676]
 shape = SubResource("CapsuleShape2D_a6wu5")

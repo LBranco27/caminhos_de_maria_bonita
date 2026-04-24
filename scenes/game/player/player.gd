@@ -15,6 +15,9 @@ func _ready() -> void:
 	if not Dialogic.timeline_ended.is_connected(_on_dialogic_timeline_ended):
 		Dialogic.timeline_ended.connect(_on_dialogic_timeline_ended)
 
+	GameState.current_player = self
+	Baralho.current_player = self
+	SceneManager.current_player = self
 
 
 func _physics_process(delta: float) -> void:
@@ -82,9 +85,25 @@ func _get_nearest_interactable() -> Node2D:
 
 
 func _on_dialogic_timeline_started() -> void:
-	dialog_active = true
-	velocity = Vector2.ZERO
+	stop()
 
 
 func _on_dialogic_timeline_ended() -> void:
+	resume()
+
+
+func stop():
+	dialog_active = true
+	velocity = Vector2.ZERO
+
+func resume():
 	dialog_active = false
+
+#region card
+func buy_card():
+	%card_selection.initialize_selection()
+	await %card_selection.card_chosen
+	%hand.update_hand()
+
+func invoke_choice(card_id):
+	%choice.show_choices(card_id)
