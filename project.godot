@@ -57,7 +57,11 @@ layout/style_directory={
 }
 variables={
 "c1": {
+"corisco_idle_roll": 0,
+"jesuino_idle_roll": 0,
 "lampiao_idle_roll": 0,
+"met_corisco": false,
+"met_jesuino": false,
 "met_lampiao": false
 }
 }
